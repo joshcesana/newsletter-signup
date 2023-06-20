@@ -3,17 +3,60 @@
 
 body
     font-family: 'Roboto', sans-serif
-    background-color: $background-color
+    background-color: $color-pale-navy
     color: white
     display: flex
     align-items: center
     justify-content: center
 
+h1
+    font-size: $h1-size
+    font-weight: bold
+    color: $color-dark-navy
+    padding-bottom: 1.75rem
+    line-height: 56px
+
+p
+    padding-bottom: 1rem
+    line-height: 27px
+
+ul
+    list-style: none
+    line-height: 1.5
+    padding-bottom: 2rem
+
+    li
+        background: url('/icon-list.svg') no-repeat left center
+        padding: 5px 10px 5px 38px
+        list-style: none
+        margin: 0
+        vertical-align: middle
+
+button
+    background: #242742
+    border-radius: 8px
+    padding: 1.1rem 1.5rem
+    font-weight: bold
+    color: white
+    width: 100%
+    border: none
+    cursor: pointer
+
+    &:hover
+        background: $bg-gradient
+        box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5)
+
+.desktop
+    display: block
+
+.mobile
+    display: none
+
 .newsletter-container
     display: flex
-    max-width: 928px
     padding: 1.65rem
-    color: $font-color
+    padding-left: 4.5rem
+    color: $color-dark-navy
     background-color: white
     border-radius: 40px
 
@@ -21,14 +64,114 @@ body
         display: flex
         flex-direction: column
         justify-content: center
+        padding-right: 4rem
+        max-width: 446px
 
-        h1
-            font-size: $h1-size
-            font-weight: bold
-            color: $font-color
+        .label-container
+            display: flex
+            justify-content: space-between
 
-        ul
-            list-style: none
+            label, .error-message
+                font-size: 12px
+                font-weight: bold
+                display: block
+                padding-bottom: .6rem
+
+            .error-message
+                color: $color-bright-red
+
+        input
+            padding: 1.1rem 1.5rem
+            border: 1px solid rgba(25, 24, 43, 0.25)
+            border-radius: 8px
+            color: #242742
+            opacity: 0.5
+            width: 100%
+            margin-bottom: 1.5rem
+            cursor: pointer
+
+            &::placeholder
+                color: $color-dark-navy
+
+            &:focus
+                outline: none
+                border: 1px solid $color-dark-navy
+                opacity: 1
+
+            &.error
+                color: $color-bright-red
+                border: 1px solid $color-bright-red
+                background-color: $color-bright-red-15
+                opacity: 1
 
     .image-container
         max-width: 400px
+
+.success-container
+    display: flex
+    flex-direction: column
+    max-width: 520px
+    padding: 3.75rem 4rem
+    // padding-left: 4.5rem
+    color: $color-dark-navy
+    background-color: white
+    border-radius: 40px
+
+    .email-bold
+        font-weight: bold
+
+    img
+        margin-bottom: 2rem
+
+    p
+        padding-bottom: 2.5rem
+
+@media only screen and (max-width: 1000px)
+    h1
+        font-size: 40px
+
+    .desktop
+        display: none
+
+    .mobile
+        display: block
+
+    .newsletter-container
+        width: 100%
+        height: 100vh
+        flex-direction: column-reverse
+        align-items: center
+        border-radius: 0
+        padding: 0
+
+        .image-container
+            width: 100%
+            max-width: none
+
+        .text-container
+            height: 100%
+            width: 100%
+            justify-content: flex-start
+            max-width: none
+            padding: 2rem 1.5rem
+            margin: 0
+
+        ul
+            height: 100%
+
+        img
+            width: 100%
+            padding: 0
+            margin: 0
+
+    .success-container
+        padding: 8rem 2rem 2.25rem
+        height: 100vh
+        width: 100vw
+        border-radius: 0
+
+        h1
+            line-height: 42px
+
+        p
+            height: 100%
