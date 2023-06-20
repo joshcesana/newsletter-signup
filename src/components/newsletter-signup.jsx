@@ -50,7 +50,7 @@ function NewsletterSignup() {
                     {/* <div className="image-container-2"></div> */}
                     <div className="image-container">
                         <img className="desktop" src='/illustration-sign-up-desktop.svg' alt="Decorative image" width="400" height="593" />
-                        <img className="mobile" src='/illustration-sign-up-mobile.svg' alt="Decorative image" />
+                        <img className="mobile" src='/illustration-sign-up-mobile.svg' alt="Decorative image" width="1000" />
                     </div>
                 </div>
             )}
